@@ -17,4 +17,4 @@ print((num1 * K + num2) * ( M // (K+1)) + num1 * (M % (K+1)))
 # nums.sort() # 입력받은 수 정렬
 # num1 = nums[n-1]
 # num2 = nums[n-2]
-# 이렇게 함.
+# 이렇게 책에선 함.
