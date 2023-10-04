@@ -12,6 +12,7 @@ def solution(left, right):
     return answer
 
 '''
+# 다른 사람의 풀이
 약수가 홀수 개인 모든 수는 제곱 수 !!
 def solution(left, right):
     answer = 0
