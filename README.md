@@ -1,2 +1,4 @@
 # Algorithm
 training . . .
+
+Language : Javascript
