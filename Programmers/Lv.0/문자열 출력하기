@@ -1,14 +1,23 @@
+// node.js에서 readline 모듈을 불러오는 코드. 표준 입력(키보드 입력)을 처리할 수 있게 해주는 모듈임.
 const readline = require('readline');
+
+// readline.createInterface() 함수 -> 입력과 출력을 정의하여 사용자와 상호작용하는 인터페이스를 만듦.
+// input: process.stdin -> 표준 입력 장치(키보드)로부터 데이터를 받도록 설정.
+// output: process.stdout -> 표준 출력 장치(화면)에 데이터를 출력하도록 설정함.
 const rl = readline.createInterface({
     input: process.stdin,
     output: process.stdout
 });
 
+// 입력받은 데이터를 저장할 배열. 여기서는 입력을 한 줄씩 받을 수 있도록 빈 배열로 선언함.
 let input = [];
 
+// rl.on('line', ...) -> 사용자가 입력한 한 줄(line)이 들어올 때마다 이 이벤트가 발생함.
+// input = [line]; -> 입력받은 한 줄을 input 배열에 저장함. (배열의 첫 번째 요소에 해당 입력을 저장함)
 rl.on('line', function (line) {
     input = [line];
 }).on('close',function(){
-    str = input[0];
-    console.log(str); // 이 부분만 추가함.
+		// rl.on('close', function() {...}); -> close 이벤트는 입력이 끝났을 때 발생함. 일반적으로 입력을 다 받았을 때 마지막으로 처리하고 싶은 코드를 여기에 작성함.
+    str = input[0]; // 우리가 입력받은 첫번째 줄을 str에 저장함.
+    console.log(str); // str에 저장된 입력값을 콘솔에 출력함.
 });
