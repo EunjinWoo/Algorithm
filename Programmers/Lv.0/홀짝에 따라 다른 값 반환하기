@@ -1,0 +1,10 @@
+function solution(n) {
+    const start = (n%2===0) ? 2 : 1;
+    let answer = 0;
+    
+    for (let i=start; i<=n; i+=2) {
+        (n%2===0) ? answer += i**2 : answer += i;
+    }
+    
+    return answer;
+}
