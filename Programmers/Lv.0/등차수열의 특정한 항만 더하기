@@ -1,0 +1,5 @@
+function solution(a, d, included) {
+    let answer = 0;
+    included.forEach((e,i) => {if(e) {answer +=a+i*d}});
+    return answer;
+}
