@@ -1,4 +1,5 @@
 # Algorithm
-training . . .
+training . . . 🫠
 
 Language : Javascript
+
